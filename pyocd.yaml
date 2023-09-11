@@ -1,0 +1,12 @@
+probes:
+  E6614103E781362F: # Probe's unique ID.
+    target_override: rp2040
+    test_binary: ./build/app.elf
+
+# Global options
+auto_unlock: false
+frequency: 8000000 # Set 8 MHz SWD default for all probes
+enable_semihosting: true
+semihost_console_type: "console"
+telnet_port: 5001
+semihost_use_syscalls: false
