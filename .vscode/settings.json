@@ -1,0 +1,41 @@
+{
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/home/skyne/Dev/betaflight/obj/main",
+            "binaryPath": "/home/skyne/Dev/betaflight/obj/main/betaflight_STM32F411.elf",
+            "binaryArgs": []
+        }
+    ],
+    "files.associations": {
+        "stdint.h": "c",
+        "platform.h": "c",
+        "nvic.h": "c",
+        "stm32f4xx.h": "c",
+        "common_defaults_post.h": "c",
+        "persistent.h": "c",
+        "common_pre.h": "c",
+        "sensor_alignment.h": "c",
+        "gyrodev.h": "c",
+        "axis.h": "c",
+        "bus_i2c.h": "c",
+        "build_config.h": "c",
+        "bus_i2c_impl.h": "c",
+        "io.h": "c",
+        "system_stm32f7xx.h": "c",
+        "stm32f7xx_ll_ex.h": "c",
+        "accgyro_mpu.h": "c",
+        "stdbool.h": "c",
+        "msp.h": "c",
+        "pg.h": "c",
+        "string_view": "c",
+        "rope": "c",
+        "regex": "c",
+        "accgyro_mpu6500.h": "c",
+        "common_post.h": "c",
+        "target.h": "c",
+        "runtime_config.h": "c",
+        "utils.h": "c",
+        "string.h": "c",
+        "config.h": "c"
+    }
+}

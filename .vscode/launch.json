@@ -1,0 +1,38 @@
+{
+    "configurations": [
+        {
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceRoot}/obj/main/betaflight_STM32F405.elf",
+            "name": "Cortex-Debug with PyOCD",
+            "request": "launch",
+            "type": "cortex-debug",
+            "runToEntryPoint": "main",
+            "showDevDebugOutput": "none",
+            "servertype": "pyocd"
+        },
+        {
+            "name": "GDB Lunch",
+            "type": "cppdbg",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceRoot}/obj/main/betaflight_STM32F405_STM32F4DISCOVERY.elf",
+            "MIMode": "gdb",
+            "miDebuggerPath": "/opt/st/stm32cubeclt/GNU-tools-for-STM32/bin/arm-none-eabi-gdb",
+            "miDebuggerServerAddress": "localhost:3333",
+            "debugServerPath": "/opt/st/stm32cubeclt/STLink-gdb-server/bin/ST-LINK_gdbserver",
+            "debugServerArgs": "--stm32cubeprogrammer-path /opt/st/stm32cubeclt/STM32CubeProgrammer/bin --swd --port-number 3333",
+            "serverStarted": "Waiting for connection on port .*\\.\\.\\.",
+            "stopAtConnect": true,
+            "postRemoteConnectCommands": [
+                {
+                    "text": "load ${workspaceRoot}/obj/main/betaflight_STM32F405_STM32F4DISCOVERY.elf"
+                }
+            ],
+            "logging": {
+                "engineLogging": true
+            },
+            "preLaunchTask": "Build",
+            "svdPath": "/opt/st/stm32cubeclt/STMicroelectronics_CMSIS_SVD/STM32F429.svd"
+        }
+    ]
+}
