@@ -1,16 +1,21 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-      {
-        "label": "Build",
-        "type": "shell",
-        "command": "make STM32F4DISCOVERY EXTRA_FLAGS=\"-DUSE_CONFIG\" DEBUG=GDB",
-        "problemMatcher": "$gcc",
-        "group": {
-          "kind": "build",
-          "isDefault": true
-        }
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build",
+      "type": "shell",
+      "command": "make STM32F4DISCOVERY EXTRA_FLAGS=\"-DUSE_CONFIG\" DEBUG=GDB",
+      "problemMatcher": "$gcc",
+      "group": {
+        "kind": "build",
+        "isDefault": true
       }
-    ]
-  }
-  
+    },
+    {
+      "label": "erase",
+      "type": "shell",
+      "dependsOn": "Build",
+      "command": "/opt/st/stm32cubeclt/STLink-gdb-server/bin/ST-LINK_gdbserver --stm32cubeprogrammer-path /opt/st/stm32cubeclt/STM32CubeProgrammer/bin --swd --erase-all"
+    }
+  ]
+}

@@ -31,7 +31,7 @@
             "logging": {
                 "engineLogging": true
             },
-            "preLaunchTask": "Build",
+            "preLaunchTask": "erase",
             "svdPath": "/opt/st/stm32cubeclt/STMicroelectronics_CMSIS_SVD/STM32F429.svd"
         }
     ]
